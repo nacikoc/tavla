@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Imza bilgileri depoya girmeyen android/keystore.properties dosyasindan okunur.
+// Dosya yoksa (ornegin taze bir klon) derleme calisir, yalnizca release imzasiz kalir.
+def imzaDosyasi = rootProject.file('keystore.properties')
+def imza = new Properties()
+if (imzaDosyasi.exists()) {
+    imzaDosyasi.withInputStream { imza.load(it) }
+}
+def imzaVar = imzaDosyasi.exists()
+
+android {
+    namespace 'com.hilspot.tavla'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId "com.hilspot.tavla"   // Play'de KALICI — yayindan sonra degistirilemez
+        minSdk 21
+        targetSdk 36
+        versionCode 5
+        versionName "1.4"
+    }
+
+    signingConfigs {
+        release {
+            if (imzaVar) {
+                storeFile file(imza['storeFile'])
+                storePassword imza['storePassword']
+                keyAlias imza['keyAlias']
+                keyPassword imza['keyPassword']
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (imzaVar) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

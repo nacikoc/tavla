@@ -1,0 +1,28 @@
+# --- SIRLAR: asla depoya girmemeli ---
+# Uygulama imza anahtari. Bu dosya sizilirsa baskasi sizin adiniza uygulama
+# imzalayabilir. Yedegi Drive'da / parola yoneticisinde durmali, git'te degil.
+*.jks
+*.keystore
+# Keystore parolalari (build.gradle bu dosyadan okur)
+keystore.properties
+
+# --- Android / Gradle uretimleri ---
+.gradle/
+build/
+android/build/
+android/app/build/
+# Makineye ozel SDK yolu
+local.properties
+*.iml
+.idea/
+
+# --- Derlenmis ciktilar (build.ps1 ile yeniden uretilir) ---
+apk/
+
+# --- Arac ayarlari ---
+.claude/settings.local.json
+
+# --- Isletim sistemi ---
+Thumbs.db
+Desktop.ini
+.DS_Store
