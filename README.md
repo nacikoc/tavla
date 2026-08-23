@@ -211,6 +211,23 @@ cevapları ve geri dönüşü olmayan kararlar
 Play'e yüklenen dosya `apk/Tavla.aab`'dir; `apk/Tavla.apk` yalnızca elden
 kurulum ve test içindir.
 
+## İndirme
+
+Kurulabilir paketler depoda tutulmaz; her sürüm
+[Releases](https://github.com/nacikoc/tavla/releases) sayfasında yayımlanır.
+Kendiniz derlemek isterseniz [Kurulum](#kurulum) bölümüne bakın.
+
+## Lisans
+
+Kaynak kod [MIT lisansı](LICENSE) ile sunulur — istediğiniz gibi kullanabilir,
+değiştirebilir ve dağıtabilirsiniz.
+
+Lisansın **kapsamadığı** şeyler: uygulamanın adı (*Tavla — Çevrimdışı Klasik*),
+simgesi, öne çıkan görseli ve `store/` altındaki mağaza materyalleri ile
+`com.hilspot.tavla` uygulama kimliği. Bunlar uygulamanın kimliğine aittir ve
+saklıdır. Kodu temel alan bir sürüm yayımlarsanız kendi adınızı, simgenizi ve
+kendi paket adınızı kullanın.
+
 ---
 
 Bu uygulama **Naci Koç** tarafından yapılmıştır — <nakisoft@gmail.com>
