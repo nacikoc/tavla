@@ -106,6 +106,12 @@ ikinci argümanı yalnızca tıklama dinleyicisi gönderir.
 
 ## Geliştirme
 
+> **Koda ilk kez dokunacaksanız
+> [docs/GELISTIRICI-REHBERI.md](docs/GELISTIRICI-REHBERI.md) ile başlayın.**
+> Orada `src/app.html`'in bölüm bölüm haritası, mimari kararların gerekçeleri
+> (neden HTML5, neden çerçeve yok, neden DOM odağı kullanılmıyor), sürüm
+> çıkarma akışı ve geliştirme sırasında gerçekten düşülen on tuzak var.
+
 Kaynak oyun dosyası `src/app.html`. Bu dosya HTML iskeleti olmadan yazılır
 (Artifact olarak yayınlanabilmesi için); `build.ps1` onu tam bir HTML sayfasına
 sarıp `index.html` üretir, APK varlıklarına kopyalar ve paketleri derler.
@@ -168,6 +174,7 @@ android/                     Android WebView sarmalayıcı projesi
   app/src/main/assets/       index.html buraya kopyalanır
   tavla-release.jks          imzalama anahtarı — depoda YOK
   keystore.properties        anahtar yolu ve parolaları — depoda YOK
+docs/GELISTIRICI-REHBERI.md  kod haritası, mimari kararlar, tuzaklar
 store/                       Play Console için hazırlıklar
   PLAY-YOL-HARITASI.md       yükleme adımları ve beyan formlarının cevapları
   magaza-metinleri.md        uygulama adı, açıklamalar, sürüm notları
